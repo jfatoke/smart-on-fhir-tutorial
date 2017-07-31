@@ -11,8 +11,13 @@
       if (smart.hasOwnProperty('user')) {
         var user = smart.user;
         var u = user.read();
-        console.log(u);
+        var u_obj = smart.user.api.fetchAll({
+          type: 'Observation'
+        });
 
+        $.when(u, u_obj).done(function(user, u_obj){
+          console.log(u);
+        });
       }
 
       if (smart.hasOwnProperty('patient')) {
