@@ -11,6 +11,7 @@
       if (smart.hasOwnProperty('user')) {
         var user = smart.user;
         var u = user.read();
+        console.log(u);
 
       }
 
