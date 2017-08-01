@@ -12,7 +12,10 @@
         var user = smart.user;
         var u = user.read();
         var u_obj = smart.user.api.fetchAll({
-          type: 'Observation'
+          type: 'Observation',
+          query: {
+            code : 'read'
+          }
         });
 
         $.when(u, u_obj).done(function(user, u_obj){
