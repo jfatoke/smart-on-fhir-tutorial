@@ -8,20 +8,20 @@
     }
 
     function onReady(smart)  {
-      if (smart.hasOwnProperty('user')) {
-        var user = smart.user;
-        var u = user.read();
-        var u_obj = smart.user.api.fetchAll({
-          type: 'Observation',
-          query: {
-            code : 'read'
-          }
-        });
-
-        $.when(u, u_obj).done(function(user, u_obj){
-          console.log(u);
-        });
-      }
+      // if (smart.hasOwnProperty('user')) {
+      //   var user = smart.user;
+      //   var u = user.read();
+      //   var u_obj = smart.user.api.fetchAll({
+      //     type: 'Observation',
+      //     query: {
+      //       code : 'read'
+      //     }
+      //   });
+      //
+      //   $.when(u, u_obj).done(function(user, u_obj){
+      //     console.log(u);
+      //   });
+      // }
 
       if (smart.hasOwnProperty('patient')) {
         var patient = smart.patient;
